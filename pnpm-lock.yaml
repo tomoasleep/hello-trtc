@@ -26,9 +26,6 @@ dependencies:
   trtc-js-sdk:
     specifier: ^4.15.19
     version: 4.15.19
-  use-async-effect:
-    specifier: ^2.2.7
-    version: 2.2.7(react@18.2.0)
 
 devDependencies:
   '@types/node':
@@ -2596,14 +2593,6 @@ packages:
     dependencies:
       punycode: 2.3.1
     dev: true
-
-  /use-async-effect@2.2.7(react@18.2.0):
-    resolution: {integrity: sha512-Vq94tKPyo/9Nok4LOapV0GoGgZPhbeDW/bP6bulLPV4+lIoftaBRBBbGjTbM+j5W1Bm2EkUHJgapeu5YnQvKEA==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      react: 18.2.0
-    dev: false
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}

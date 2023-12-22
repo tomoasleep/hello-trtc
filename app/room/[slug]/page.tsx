@@ -1,21 +1,19 @@
 "use client";
 
-import { useReducer } from "react";
-import { RoomForm, formReducer } from "./RoomForm";
+import { useEffect } from "react";
 import { RoomCall } from "./RoomCall";
+import { useUserSession } from "@/app/lib/useUserSession";
+import { redirect } from "next/navigation";
 
 export default function Room({ params }: { params: { slug: string } }) {
-  const [store, dispatch] = useReducer(formReducer, {});
+  const [{ userId, userSig }] = useUserSession();
 
   return (
     <div className="container mx-auto">
-      <RoomForm formDispatch={dispatch} />
-      {store.userId?.length && store.userSig?.length && (
-        <RoomCall
-          roomId={params.slug}
-          userId={store.userId}
-          userSig={store.userSig}
-        />
+      {userId?.length && userSig?.length ? (
+        <RoomCall roomId={params.slug} userId={userId} userSig={userSig} />
+      ) : (
+        <div>please login</div>
       )}
     </div>
   );

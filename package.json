@@ -15,8 +15,7 @@
     "react-dom": "^18",
     "tls-sig-api": "^1.0.2",
     "tls-sig-api-v2": "^1.0.2",
-    "trtc-js-sdk": "^4.15.19",
-    "use-async-effect": "^2.2.7"
+    "trtc-js-sdk": "^4.15.19"
   },
   "devDependencies": {
     "@types/node": "^20",
