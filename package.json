@@ -9,9 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tls-sig-api": "^1.0.2",
+    "tls-sig-api-v2": "^1.0.2",
+    "trtc-js-sdk": "^4.15.19",
+    "use-async-effect": "^2.2.7"
   },
   "devDependencies": {
     "@types/node": "^20",
