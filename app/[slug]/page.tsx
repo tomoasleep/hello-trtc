@@ -1,9 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
-import { RoomCall } from "./RoomCall";
+import { Call } from "./Call";
 import { useUserSession } from "@/app/lib/useUserSession";
-import { redirect } from "next/navigation";
 
 export default function Room({ params }: { params: { slug: string } }) {
   const [{ userId, userSig }] = useUserSession();
@@ -11,9 +9,11 @@ export default function Room({ params }: { params: { slug: string } }) {
   return (
     <div className="container mx-auto">
       {userId?.length && userSig?.length ? (
-        <RoomCall roomId={params.slug} userId={userId} userSig={userSig} />
+        <Call roomId={params.slug} userId={userId} userSig={userSig} />
       ) : (
-        <div>please login</div>
+        <div>
+          please login at <a href="/">here</a>
+        </div>
       )}
     </div>
   );

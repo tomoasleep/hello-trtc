@@ -11,7 +11,7 @@ export default function Home() {
   const [roomId, setRoomId] = useState("");
 
   useEffect(() => {
-    roomId.length && redirect(`/room/${roomId}`);
+    roomId.length && redirect(`/${roomId}`);
   }, [roomId]);
 
   return (
